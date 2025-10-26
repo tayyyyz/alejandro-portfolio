@@ -1,16 +1,42 @@
-# React + Vite
+# 🚀 AlejandroDev — Responsive Header Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Header Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2Eyc2JtNGZ3MmQ4bzNjc21nMjU2cWhwZ2loOGV6ZDlpd3VhYmZzMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/H1dxi6xdh4NGQCZSvz/giphy.gif)
 
-Currently, two official plugins are available:
+## 🧩 About this project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a **responsive and animated header component** built with **React + TailwindCSS + Boxicons**.  
+It includes both **desktop and mobile navigation**, a **hamburger menu** toggle, and a clean minimalist design — perfect for portfolios, landing pages, or web apps.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+✅ Fully **responsive** (mobile-first design)\
+✅ **Smooth mobile menu toggle** using React `useState`\
+✅ Built with **TailwindCSS** for fast and modern styling\
+✅ Uses **Boxicons** for sleek and lightweight icons\
+✅ Ready to integrate into any React project\
+✅ Simple, scalable, and clean code
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Description |
+|-------------|--------------|
+| ⚛️ **React** | UI library for building interactive components |
+| 🎨 **TailwindCSS** | Utility-first CSS framework |
+| 🔷 **Boxicons** | Free icon set for modern UIs |
+
+---
+
+## 🧠 How It Works
+
+The header uses a simple state variable to manage the mobile menu’s visibility:
+
+```jsx
+const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+const toggleMobileMenu = () => {
+  setIsMenuOpen(!isMenuOpen);
+};
