@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-black text-white relative font-sans h-screen overflow-x-hidden;
+    /* Cambiamos 'font-sans' por 'font-['Plus_Jakarta_Sans']' para forzar la nueva fuente limpia */
+    @apply bg-black text-white relative font-['Plus_Jakarta_Sans'] h-screen overflow-x-hidden;
   }
 }

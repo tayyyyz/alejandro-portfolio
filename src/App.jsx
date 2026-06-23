@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Projects from "./components/Projects";
+import About from "./components/About"
 import Contact from "./components/Contact"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -24,6 +25,7 @@ useEffect(() => {
       <Header />
       <Hero />
       <Projects />
+      <About />
       <Contact />
     </main>
   )
