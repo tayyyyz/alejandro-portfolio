@@ -7,11 +7,13 @@ I have created this portfolio to serve as a centralized and organized space in o
 ---
 
 ## 🛠️ Tech Used
+
+| Technology | Description |
+| :--- | :--- |
 | ⚛️ **React** | I used it to build the frontend, I used it for the “Header”, “Hero”, “About”, “Projects”, and “Contact” components of my portfolio |
 | ⚡ **Vite** | I built the project using Vite as the build tool, running on the Node.js environment |
 | 🎨 **TailwindCSS** | For efficient performance focused styling the project |
 | 🔷 **Boxicons** | For lightweight and modern UI iconography |
-
 ---
 
 ## 🧠 Design Philosophy
@@ -27,9 +29,9 @@ My design philosophy is **"content-first" with a touch of interactivity**. I fol
 
 ## 🚀 Future Improvements
 This is a living project for me, as it will grow alongside my career. For the future, I’m looking forward to:
-*   **•	Improve the animation library** in order to ensure a satisfying experience for the recruiter/user.
-*   **•	Add an API** , so I can add more projects (with pictures) by just entering the database without having to touch the code or redeploy it.
-*   **•	Create a visitor counter** this would allow me to change my “static web” into a “functional one”.
+*   **	Improve the animation library** in order to ensure a satisfying experience for the recruiter/user.
+*   **	Add an API** , so I can add more projects (with pictures) by just entering the database without having to touch the code or redeploy it.
+*   **	Create a visitor counter** this would allow me to change my “static web” into a “functional one”.
 ---
 
 ## 🔗 Live Portfolio
