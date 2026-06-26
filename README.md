@@ -1,39 +1,35 @@
-# 🚀 AlejandroDev — Interactive Portfolio
+# 🚀 AlejandroDev —  Portfolio
 
 ![Header Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2Eyc2JtNGZ3MmQ4bzNjc21nMjU2cWhwZ2loOGV6ZDlpd3VhYmZzMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/H1dxi6xdh4NGQCZSvz/giphy.gif)
 
 ## 🧩 About this project
-This is an **interactive and responsive portfolio** built with **React**, **Vite**, and **TailwindCSS**. It goes beyond static design by incorporating smooth animations (like mouse-tracking effects) and a component-based architecture to provide a modern, engaging user experience[cite: 3, 4].
-
+I have created this portfolio to serve as a centralized and organized space in order to showcase my work, my projects and my CV. My main aim was to develop a platform that was not only visually attractive, but also highly functional. During development, I was thinking to make it fully responsive for phones and computer users, that way i can ensure that the layout remained clean and legible on both. I chose a minimalist design, avoiding unnecessary animations or complex elements to ensure that the focus remained on my projects and technical skills.
 ---
 
-## 🛠️ Tech Stack & Justification
-| Technology | Why I chose it |
-| :--- | :--- |
-| ⚛️ **React** | For modular, component-based architecture[cite: 3, 4]. |
-| ⚡ **Vite** | For an optimized, blazing-fast development experience[cite: 3, 4]. |
-| 🎨 **TailwindCSS** | For efficient, performance-focused styling[cite: 3, 4]. |
-| 🔷 **Boxicons** | For lightweight and modern UI iconography[cite: 3, 4]. |
+## 🛠️ Tech Used
+| ⚛️ **React** | I used it to build the frontend, I used it for the “Header”, “Hero”, “About”, “Projects”, and “Contact” components of my portfolio |
+| ⚡ **Vite** | I built the project using Vite as the build tool, running on the Node.js environment |
+| 🎨 **TailwindCSS** | For efficient performance focused styling the project |
+| 🔷 **Boxicons** | For lightweight and modern UI iconography |
 
 ---
 
 ## 🧠 Design Philosophy
-My design philosophy is **"content-first" with a touch of interactivity**. I adopted a **mobile-first approach** to ensure the portfolio is accessible on all devices[cite: 3, 4]. By using custom animations rather than heavy frameworks, I’ve managed to keep the site lightweight while adding "personality" to the interface[cite: 3, 4].
+My design philosophy is **"content-first" with a touch of interactivity**. I followed a **mobile-first approach** to ensure the portfolio is accessible on all devices.
 
 ---
 
 ## 💡 Reflection: Strengths & Weaknesses
-*   **Strengths:** The portfolio excels in **maintainability** and **performance**[cite: 3, 4]. The code is organized into discrete components (`Header`, `Hero`, `Projects`, etc.), making it easy to scale[cite: 3, 4]. The animations provide a polished, professional feel without sacrificing load speed[cite: 3, 4].
-*   **Weaknesses:** Currently, the site operates as a **client-side application with hard-coded content**[cite: 3, 4]. While the interactivity is high, dynamic updates (like adding a blog) still require manual code changes rather than a database-driven approach[cite: 3, 4].
+*   **Strengths:** One of the strongest points of this portfolio is the **maintainability**, as If I want to add more projects, animations, sections or update some project details, that wouldn’t be a problem at all. Furthermore, the use of Vite and Tailwind ensures a high performance for the portfolio.
+*   **Weaknesses:** While the frontend is well structured and interactive, it doesn’t have a proper backend. This means that while we navigate on my portfolio and we feel that the interface is dynamic, the content is still hard coded. I have to recognize that as I add more complex features to this project, I also have to consider a better backend integration to keep the code clean.
 
 ---
 
-## 🚀 Future Roadmap
-To evolve this project, I plan to:
-*   **Integrate a CMS:** To manage project data dynamically without redeploying the site[cite: 3, 4].
-*   **Add a Technical Blog:** To document my problem-solving process and coding challenges[cite: 3, 4].
-*   **Backend Implementation:** To enable features like contact forms and visitor tracking, moving from a static-data frontend to a full-stack application[cite: 3, 4].
-
+## 🚀 Future Improvements
+This is a living project for me, as it will grow alongside my career. For the future, I’m looking forward to:
+*   **•	Improve the animation library** in order to ensure a satisfying experience for the recruiter/user.
+*   **•	Add an API** , so I can add more projects (with pictures) by just entering the database without having to touch the code or redeploy it.
+*   **•	Create a visitor counter** this would allow me to change my “static web” into a “functional one”.
 ---
 
 ## 🔗 Live Portfolio
