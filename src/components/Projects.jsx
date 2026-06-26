@@ -7,11 +7,11 @@ const Projects = () => {
   const [animate, setAnimate] = useState(false)
 
   const projectImages = [
-    "/project_pics/1.jpg",
-    "/project_pics/2.jpg",
-    "/project_pics/3.jpg",
-    "/project_pics/4.jpg",
-    "/project_pics/5.jpg"
+    "project_pics/1.jpg",
+    "project_pics/2.jpg",
+    "project_pics/3.jpg",
+    "project_pics/4.jpg",
+    "project_pics/5.jpg"
   ]
 
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
