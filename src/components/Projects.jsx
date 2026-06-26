@@ -6,17 +6,17 @@ const Projects = () => {
   const [open, setOpen] = useState(false)
   const [animate, setAnimate] = useState(false)
 
-  // Array de imágenes de tu juego
   const projectImages = [
-    "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600",
-    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600",
-    "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600"
+    "/project_pics/1.jpg",
+    "/project_pics/2.jpg",
+    "/project_pics/3.jpg",
+    "/project_pics/4.jpg",
+    "/project_pics/5.jpg"
   ]
 
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
   const [isLightboxOpen, setIsLightboxOpen] = useState(false)
 
-  // Manejador del ciclo de vida de la animación Smooth del Modal
   useEffect(() => {
     if (open) {
       const timer = setTimeout(() => setAnimate(true), 10)
@@ -59,7 +59,6 @@ const Projects = () => {
       />
 
       <div className="max-w-6xl mx-auto">
-        {/* HEADER DE LA SECCIÓN CON LÍNEA ANIMADA */}
         <div className="group text-center flex flex-col items-center">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white/95">
             <span className="bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent">
@@ -67,7 +66,6 @@ const Projects = () => {
             </span>
           </h2>
           
-          {/* LÍNEA DECORATIVA ANIMADA (Centrada y expandible) */}
           <div className="h-[3px] w-12 rounded-full mt-3 bg-gradient-to-r from-amber-400 to-orange-600 shadow-[0_0_15px_rgba(255,170,51,0.6)] transition-all duration-500 ease-out group-hover:w-36" />
           
           <p className="text-lg text-white/60 mt-4 font-light tracking-wide">
@@ -75,11 +73,8 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Grid */}
         <div className="mt-10 grid md:grid-cols-2 gap-8">
-          {/* Card del Proyecto */}
           <div className="border border-neutral-900 rounded-2xl bg-neutral-900/40 backdrop-blur-sm p-6 hover:border-amber-500 hover:shadow-[0_0_25px_rgba(255,170,51,0.25)] transition-all duration-300">
-            
             <div className="flex items-center justify-between mb-3">
               <h3 className="text-xl md:text-2xl font-semibold text-white/90 tracking-tight">
                 The Defenders of the Amazon
@@ -117,7 +112,6 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* MODAL DETALLES */}
       {open && (
         <div
           className={`fixed inset-0 flex items-center justify-center z-50 p-4 transition-all duration-300 ease-out bg-black/40 backdrop-blur-md ${
@@ -149,7 +143,6 @@ const Projects = () => {
               The Defenders of the Amazon is a C++ game where two characters compete to collect coins. When a player grabs a coin, a basic math question appears. If answered correctly, the coin counts; if not, it doesn't. The first player to collect 3 coins wins. The game was developed entirely in C++ using simple graphics.
             </p>
 
-            {/* CARRUSEL DE IMÁGENES */}
             <div className="relative flex items-center justify-center w-full aspect-video bg-black/60 rounded-xl overflow-hidden border border-neutral-900 mt-2">
               <button
                 onClick={prevImage}
@@ -159,11 +152,13 @@ const Projects = () => {
                 <i className="bx bx-chevron-left" />
               </button>
 
+              {/* Animación añadida aquí mediante la key y la clase animate-fade */}
               <img
+                key={currentImgIndex}
                 src={projectImages[currentImgIndex]}
                 alt="Project screenshot"
                 onClick={() => setIsLightboxOpen(true)}
-                className="w-full h-full object-cover cursor-zoom-in hover:scale-102 transition-transform duration-300"
+                className="w-full h-full object-cover cursor-zoom-in hover:scale-102 transition-transform duration-300 animate-[fade_0.4s_ease-in-out]"
               />
 
               <button
@@ -178,7 +173,6 @@ const Projects = () => {
         </div>
       )}
 
-      {/* SUB-MODAL LIGHTBOX */}
       {open && isLightboxOpen && (
         <div
           className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 backdrop-blur-md p-4"
@@ -204,6 +198,13 @@ const Projects = () => {
           </div>
         </div>
       )}
+      
+      <style>{`
+        @keyframes fade {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+      `}</style>
     </section>
   )
 }
