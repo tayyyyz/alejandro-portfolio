@@ -8,7 +8,6 @@ const Header = () => {
 
   const toggleMobileMenu = () => setIsMenuOpen(v => !v)
 
-  // Intensifica el fondo al hacer scroll
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4)
     onScroll()
@@ -18,63 +17,37 @@ const Header = () => {
 
   return (
     <>
-      {/* HEADER FIJO CON BLUR */}
+      {/* HEADER FIJO */}
       <header
         className={`
-          fixed top-0 inset-x-0 z-40
+          fixed top-0 left-0 right-0 z-40
           border-b border-white/10
           backdrop-blur
           ${scrolled ? 'bg-black/60' : 'bg-black/30'}
         `}
       >
-        <div className="h-16 md:h-20 px-4 lg:px-20 max-w-6xl mx-auto flex justify-between items-center">
-          {/* TÍTULO REPOSITORIO (RESTAURADO EXACTAMENTE COMO ANTES) */}
-          <h1
-            data-aos="zoom-in-down"
-            className="text-3xl md:text-4xl lg:text-5xl font-light m-0 text-white"
-          >
+        {/* Usamos w-full para evitar desbordamientos laterales */}
+        <div className="w-full max-w-6xl mx-auto h-16 md:h-20 px-4 flex justify-between items-center flex-nowrap">
+          
+          <h1 className="text-2xl md:text-4xl font-light text-white truncate">
             AlejandroDev
           </h1>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-12 text-white/90">
-            <a
-              data-aos="zoom-in-down"
-              className="text-base tracking-wider transition-colors hover:text-gray-300"
-              href="#home"
-            >
-              HOME
-            </a>
-
-            <a
-              data-aos="zoom-in-down"
-              className="text-base tracking-wider transition-colors hover:text-gray-300"
-              href="#projects"
-            >
-              PROJECTS
-            </a>
-
-            <a
-              data-aos="zoom-in-down"
-              className="text-base tracking-wider transition-colors hover:text-gray-300"
-              href="#about"
-            >
-              ABOUT ME
-            </a>
-
-            <a
-              data-aos="zoom-in-down"
-              className="text-base tracking-wider transition-colors hover:text-gray-300"
-              href="#contact"
-            >
-              CONTACT
-            </a>
+            {['HOME', 'PROJECTS', 'ABOUT ME', 'CONTACT'].map((item) => (
+              <a
+                key={item}
+                className="text-base tracking-wider hover:text-gray-300 transition-colors"
+                href={`#${item.toLowerCase().replace(' ', '') === 'aboutme' ? 'about' : item.toLowerCase().replace(' ', '')}`}
+              >
+                {item}
+              </a>
+            ))}
           </nav>
 
-          {/* Botón menú móvil - ¡MÁS GRANDE PARA TOCAR FÁCIL! */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden text-4xl p-2 text-white"
+            className="md:hidden text-3xl text-white flex items-center justify-center h-12 w-12 rounded-lg hover:bg-white/10 transition-colors"
             aria-label="Toggle menu"
           >
             <i className="bx bx-menu" />
@@ -82,28 +55,27 @@ const Header = () => {
         </div>
       </header>
 
-      {/* MENÚ MÓVIL (FUERA DEL HEADER, OCUPA TODA LA PANTALLA) */}
+      {/* MENÚ MÓVIL CORREGIDO */}
+      {/* Usamos w-full y h-full en lugar de screen para evitar problemas de scrollbar */}
       <div
         id="mobileMenu"
         className={`
-          fixed inset-0 w-screen h-screen z-50 
+          fixed inset-0 z-50 w-full h-full
           flex flex-col justify-center items-center 
           bg-black/95 backdrop-blur-lg text-white 
           transition-all duration-300
-          ${isMenuOpen ? 'opacity-100 pointer-events-auto visible' : 'opacity-0 pointer-events-none invisible'}
+          ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
         `}
       >
-        {/* Botón “X” para cerrar - ¡MÁS GRANDE! */}
         <button
           onClick={() => setIsMenuOpen(false)}
-          className="absolute top-6 right-6 text-4xl text-white hover:text-gray-400 h-14 w-14 flex items-center justify-center rounded-full hover:bg-neutral-900/50 transition-all duration-200"
+          className="absolute top-6 right-6 text-4xl h-14 w-14 flex items-center justify-center rounded-full hover:bg-neutral-800 transition-all"
           aria-label="Close menu"
         >
           <i className="bx bx-x"></i>
         </button>
 
-        {/* Links centrados - ¡GRANDES, MODERNOS Y CON ANIMACIÓN SMOOTH AL PASAR EL DEDO! */}
-        <nav className="flex flex-col items-center gap-8 text-center">
+        <nav className="flex flex-col items-center gap-8">
           {[
             { href: '#home', label: 'HOME' },
             { href: '#projects', label: 'PROJECTS' },
@@ -114,11 +86,7 @@ const Header = () => {
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="
-                text-3xl font-bold tracking-widest text-white/80 transition-all duration-300
-                hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-amber-400 hover:to-orange-500
-                hover:scale-110 active:scale-95
-              "
+              className="text-3xl font-bold tracking-widest text-white/80 hover:text-amber-400 transition-all active:scale-90"
             >
               {link.label}
             </a>
@@ -126,7 +94,6 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Spacer para que el contenido no quede oculto tras el header fijo */}
       <div className="h-16 md:h-20" />
     </>
   )

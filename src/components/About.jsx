@@ -9,7 +9,6 @@ const About = () => {
     >
       <div className="max-w-6xl mx-auto">
         
-        {/* CONTENEDOR DEL TÍTULO CON GRUPO DE ANIMACIÓN */}
         <div className="group max-w-2xl mb-8">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white/95">
             <span className="bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent">
@@ -17,11 +16,9 @@ const About = () => {
             </span>
           </h2>
           
-          {/* LA LÍNEA SUBRAYADA ANIMADA (Reacciona al pasar el mouse por la zona) */}
           <div className="h-[3px] w-12 rounded-full mt-3 bg-gradient-to-r from-amber-400 to-orange-600 shadow-[0_0_15px_rgba(255,170,51,0.6)] transition-all duration-500 ease-out group-hover:w-28" />
         </div>
 
-        {/* CONTENIDO DEL TEXTO CON LA NUEVA FUENTE ESTILIZADA */}
         <div className="max-w-4xl">
           <p className="text-base md:text-lg text-white/80 font-light leading-relaxed tracking-wide">
             Software Engineering student with a passion for crafting elegant and efficient 
